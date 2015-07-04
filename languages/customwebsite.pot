@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-04 14:58+1000\n"
+"POT-Creation-Date: 2015-07-04 15:40+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,32 +40,6 @@ msgstr[1] ""
 #. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
 #: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
 msgid "yyyy-mm-dd"
-msgstr ""
-
-#: node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
-#: node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
-msgid "Exclude"
-msgstr ""
-
-#: node_modules/grunt-wp-i18n/test/fixtures/plugin-include/include/file.php:2
-msgid "Include"
-msgstr ""
-
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/add-domain.php:2
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:2
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:3
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:4
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
-#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
-msgid "String"
-msgstr ""
-
-#: node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:7
-msgid "A"
-msgstr ""
-
-#: node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:15
-msgid "B"
 msgstr ""
 
 #. //codex.wordpress.org/Template_Hierarchy
