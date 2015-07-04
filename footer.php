@@ -22,5 +22,6 @@
 
 <?php wp_footer(); ?>
 
+<!--<?php echo $wpdb->num_queries; echo ' queries in '; timer_stop(1); echo ' seconds.';?> -->
 </body>
 </html>
