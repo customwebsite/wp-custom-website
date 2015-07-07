@@ -121,6 +121,10 @@ function customwebsite_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Register CSS
+	wp_register_style('purecss', '//cdn.jsdelivr.net/pure/0.6.0/pure-min.css', array(), '0.6.0');
+	wp_enqueue_style('purecss');
 }
 add_action( 'wp_enqueue_scripts', 'customwebsite_scripts' );
 
