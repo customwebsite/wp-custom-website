@@ -29,8 +29,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'customwebsite' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			
+			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss')); // TODO: Add menu_type setting to menus ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
