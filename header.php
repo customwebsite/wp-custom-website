@@ -28,9 +28,8 @@
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			
-			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss')); // TODO: Add menu_type setting to menus ?>
+		<nav id="site-navigation" class="main-navigation custom-wrapper" role="navigation">
+			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss', 'menuToggle' => true)); // TODO: Add menu_type setting to menus ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

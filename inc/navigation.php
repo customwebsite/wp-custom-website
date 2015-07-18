@@ -1,6 +1,7 @@
 <?php
 
-require_once('wp_purecss_navwalker.php');
+// require_once('wp_purecss_navwalker.php');
+require_once('pure_menu_walker.php');
 
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus( array(
@@ -10,10 +11,14 @@ register_nav_menus( array(
 function modify_nav_menu_args( $args ) {
 	// Check if this is a purecss menu
 	if (isset($args['menu_type']) && $args['menu_type'] == 'purecss') {
-		$args['walker'] = new wp_purecss_navwalker();
-		$args['fallback_cb'] = 'wp_purecss_navwalker::fallback';
+		$args['walker'] = new pure_menu_walker();
 		$args['menu_class'] = 'pure-menu-list';
-		$args['container_class'] = 'pure-menu pure-menu-horizontal';
+		$args['container_class'] = 'pure-menu pure-menu-horizontal custom-can-transform';
+		// Is the menu toggle being displayed?
+		if ($args['menuToggle']) {
+			$toggleMarkup = '<div class="pure-menu-toggle"><a href="#" class="menu-toggle" id="menu-toggle"><s class="bar"></s><s class="bar"></s></a></div>';
+			$args['items_wrap'] = $toggleMarkup . '<ul id="%1$s" class="%2$s">%3$s</ul>';
+		}
 	}
 	// Specific to Primary Menu
 	if($args['theme_location'] == 'primary') {
