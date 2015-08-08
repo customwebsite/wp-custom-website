@@ -461,10 +461,9 @@ a {
   width: 34px;
   height: 34px;
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none; }
+  position: relative;
+  display: none;
+  float: right; }
 
 .menu-toggle .bar {
   background-color: #777;
@@ -500,7 +499,9 @@ a {
 
 @media (max-width: 47.999em) {
   .menu-toggle {
-    display: block; } }
+    display: block; }
+  .pure-menu-horizontal .pure-menu-toggle .pure-menu-list {
+    display: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility

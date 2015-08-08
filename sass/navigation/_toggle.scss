@@ -2,9 +2,7 @@
     width: 34px;
     height: 34px;
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     display: none;
 }
 
@@ -43,10 +41,11 @@
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-
 @media (max-width: 47.999em) {
     .menu-toggle {
         display: block;
     }
-
+	.pure-menu-horizontal .pure-menu-toggle .pure-menu-list {
+		display: none;
+	}
 }

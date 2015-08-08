@@ -16,7 +16,7 @@ function modify_nav_menu_args( $args ) {
 		$args['container_class'] = 'pure-menu pure-menu-horizontal custom-can-transform';
 		// Is the menu toggle being displayed?
 		if ($args['menuToggle']) {
-			$toggleMarkup = '<div class="pure-menu-toggle"><a href="#" class="menu-toggle" id="menu-toggle"><s class="bar"></s><s class="bar"></s></a></div>';
+			$toggleMarkup = '<div class="pure-menu-toggle"><div href="#" class="menu-toggle" id="menu-toggle"><s class="bar"></s><s class="bar"></s></a></div>';
 			$args['items_wrap'] = $toggleMarkup . '<ul id="%1$s" class="%2$s">%3$s</ul>';
 		}
 	}

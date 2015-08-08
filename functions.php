@@ -109,7 +109,7 @@ add_action( 'widgets_init', 'customwebsite_widgets_init' );
 function customwebsite_scripts() {
 	wp_enqueue_style( 'customwebsite-style', get_stylesheet_uri() );
 	// TODO: Get ARIA working properly for mobile navigation
-//	wp_enqueue_script( 'aria-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20150715', true );
+	wp_enqueue_script( 'aria-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20150715', true );
 	wp_enqueue_script( 'purecss-menu-toggle', get_template_directory_uri() . '/js/purecss-menu-toggle.js', array(), '20150715', true );
 	wp_enqueue_script( 'customwebsite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20150715', true );
 
