@@ -35,6 +35,7 @@ class Pure_Menu_Walker extends Walker {
 				'meta_key' => '_menu_item_menu_item_parent', 
 				'meta_value' => $item->ID,
 		));
+		$properties = '';
 		if (!empty($children)) {
 			$classes[] = 'has-sub pure-menu-has-children pure-menu-allow-hover';
 		}
@@ -45,15 +46,16 @@ class Pure_Menu_Walker extends Walker {
 		$id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args);
 		$id = $id ? ' id="' . esc_attr($id) . '"' : '';
 		
-		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+		$output .= $indent . '<li role="menu-item" ' . $id . $value . $class_names .'>';
 		
 		$attributes  = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
 		$attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target    ) .'"' : '';
 		$attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn       ) .'"' : '';
 		$attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url       ) .'"' : '';
+		$attributes .= ! empty($children)		  ? ' aria-haspopup="true"' : '';
 		
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .' class="pure-menu-link">';
+		$item_output .= '<a role="menuitem" '. $attributes .' class="pure-menu-link">';
 		$item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
