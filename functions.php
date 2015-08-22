@@ -117,9 +117,15 @@ function customwebsite_scripts() {
 
 	// Register CSS
 	wp_register_style('purecss', '//cdn.jsdelivr.net/pure/0.6.0/pure-min.css', array(), '0.6.0');
+	// TODO: limit number of CSS styles loaded
+	// wp_register_style('purecss', 'http://yui.yahooapis.com/pure/0.6.0/menus-min.css', array(), '0.6.0');
 	wp_enqueue_style('purecss');
 }
 add_action( 'wp_enqueue_scripts', 'customwebsite_scripts' );
+
+// Disable the emoji styles
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 /**
  * Implement the Custom Header feature.

@@ -462,8 +462,7 @@ a {
   height: 34px;
   display: block;
   position: relative;
-  display: none;
-  float: right; }
+  display: none; }
 
 .menu-toggle .bar {
   background-color: #777;
