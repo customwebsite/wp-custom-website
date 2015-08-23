@@ -14,6 +14,50 @@ function customwebsite_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	/* COLORS */
+	$wp_customize->add_setting( 
+		'link_color' , array(
+			'default'     => '#2F4D8D',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'link_color',
+		array(
+			'label' => __( 'Link Color', 'customwebsite' ),
+			'description' => __( 'By default the visited link color is the same as links which have not been visited' ),
+			'section' => 'colors',
+		)
+	));
+
+	$wp_customize->add_setting(
+		'link_hover_color' , array(
+			'default'     => '#2F4D8D',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'link_hover_color',
+		array(
+			'label' => __( 'Link Hover Color', 'customwebsite' ),
+			'section' => 'colors',
+		)
+	));
+
+	$wp_customize->add_setting(
+		'nav_link_color' , array(
+			'default'     => '#2F4D8D',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'nav_link_color',
+		array(
+			'label' => __( 'Navigation Link Color', 'customwebsite' ),
+			'section' => 'colors',
+		)
+	));
 }
 add_action( 'customize_register', 'customwebsite_customize_register' );
 

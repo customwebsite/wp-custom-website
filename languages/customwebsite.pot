@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-23 07:34+1000\n"
+"POT-Creation-Date: 2015-08-23 15:55+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,24 @@ msgstr ""
 
 #: footer.php:16
 msgid "http://wordpress.org/"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid ""
+"By default the visited link color is the same as links which have not been "
+"visited"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "Link Hover Color"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Navigation Link Color"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3

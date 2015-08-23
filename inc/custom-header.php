@@ -43,32 +43,39 @@ if ( ! function_exists( 'customwebsite_header_style' ) ) :
  */
 function customwebsite_header_style() {
 	$header_text_color = get_header_textcolor();
-
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value.
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
-	}
-
-	// If we get this far, we have custom styles. Let's do this.
+	$link_color = get_theme_mod('link_color');
+	$link_hover_color = get_theme_mod('link_hover_color');
+	$nav_link_color = get_theme_mod('nav_link_color');
 	?>
 	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
-	?>
+	<?php if ( 'blank' == $header_text_color ) : ?>
 		.site-title,
 		.site-description {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}
-	<?php
-		// If the user has set a custom color for the text use that.
-		else :
-	?>
+	<?php else : ?>
 		.site-title a,
 		.site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
+		}
+	<?php endif; ?>
+
+	<?php if ($link_color) : ?>
+		a, a:visited {
+			color: <?php echo  esc_attr($link_color); ?>;
+		}
+	<?php endif; ?>
+
+	<?php if ($link_hover_color) : ?>
+		a:hover {
+			color: <?php echo  esc_attr($link_hover_color); ?>;
+		}
+	<?php endif; ?>
+
+	<?php if ($link_color) : ?>
+		.main-navigation a, .main-navigation a:visited {
+			color: <?php echo  esc_attr($nav_link_color); ?>;
 		}
 	<?php endif; ?>
 	</style>
