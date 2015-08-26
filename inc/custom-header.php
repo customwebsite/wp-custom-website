@@ -46,9 +46,24 @@ function customwebsite_header_style() {
 	$link_color = get_theme_mod('link_color');
 	$link_hover_color = get_theme_mod('link_hover_color');
 	$nav_link_color = get_theme_mod('nav_link_color');
+	$body_font_url = get_theme_mod('body_font_url');
+	$body_font_family = get_font_family('body');
+	$heading_font_url = get_theme_mod('heading_font_url');
+	$heading_font_family = get_font_family('heading');
+	// TODO add Alternative font block
+	if ($body_font_url) {
+		wp_register_style('body_font', $body_font_url);
+		wp_enqueue_style('body_font');
+	}
+	if ($heading_font_url && ($heading_font_url !== $body_font_url)) {
+		wp_register_style('heading_font', $heading_font_url);
+		wp_enqueue_style('heading_font');
+	}
 	?>
 	<style type="text/css">
-	<?php if ( 'blank' == $header_text_color ) : ?>
+	<?php
+	
+	if ( 'blank' == $header_text_color ) : ?>
 		.site-title,
 		.site-description {
 			position: absolute;
@@ -78,10 +93,35 @@ function customwebsite_header_style() {
 			color: <?php echo  esc_attr($nav_link_color); ?>;
 		}
 	<?php endif; ?>
+
+	<?php if ($body_font_family) : ?>
+		body, p {
+			font-family: <?php echo $body_font_family; ?>;
+		}
+	<?php endif; ?>
+	<?php if ($heading_font_family) : ?>
+		h1, h2, h3, h4, h5, h6 {
+			font-family: <?php echo $heading_font_family; ?>;
+		}
+	<?php endif; ?>
 	</style>
-	<?php
-}
+<?php }
 endif; // customwebsite_header_style
+
+/**
+ * Builds the font family string to be used by the css font-family property.
+ * @param string $element
+ * @return string
+ */
+function get_font_family($element) {
+	$fonts = array();
+	$font_family_primary = get_theme_mod($element . '_font_family_primary');
+	if ($font_family_primary) {
+		$fonts[] = esc_attr($font_family_primary);
+	}
+	$fonts[] = esc_attr(get_theme_mod($element . '_font_family_secondary', 'sans-serif'));
+	return '"' . implode('","', $fonts) . '"';
+}
 
 if ( ! function_exists( 'customwebsite_admin_header_style' ) ) :
 /**
