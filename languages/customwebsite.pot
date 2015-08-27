@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-28 07:01+1000\n"
+"POT-Creation-Date: 2015-08-28 08:44+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,22 +48,36 @@ msgstr ""
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:136
+#: inc/customizer.php:112
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Footer Columns"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid ""
+"Columns to be used for the footer sidebar section above 768px in screen "
+"width."
+msgstr ""
+
+#: inc/customizer.php:159
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:160
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:152
+#: inc/customizer.php:175
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:167
+#: inc/customizer.php:190
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""

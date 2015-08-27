@@ -106,7 +106,7 @@ function customwebsite_header_style() {
 	<?php endif; ?>
 
 	<?php if ($body_font_family) : ?>
-		.font-body, body, p {
+		.font-body, body, html, p, button, input, select, textarea, .pure-g [class *= "pure-u"] {
 			font-family: <?php echo $body_font_family; ?>;
 		}
 	<?php endif; ?>

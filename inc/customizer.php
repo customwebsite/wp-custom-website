@@ -104,6 +104,29 @@ function customwebsite_customize_register( $wp_customize ) {
 		'',
 		'',
 		'sans-serif');
+
+	// Layout
+	$wp_customize->add_section(
+        'layout',
+        array(
+            'title' => __('Layout', 'customwebsite'),
+            'priority' => 30,
+        )
+    );
+	$wp_customize->add_setting(
+		'columns_sidebar_footer' , array(
+			'default'     => '3',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'columns_sidebar_footer',
+		array(
+			'label' => __( 'Footer Columns', 'customwebsite' ),
+			'description' => __('Columns to be used for the footer sidebar section above 768px in screen width.', 'customwebsite'),
+			'type' => 'text',
+			'section' => 'layout',
+		)
+	);
 }
 add_action( 'customize_register', 'customwebsite_customize_register' );
 

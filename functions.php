@@ -92,11 +92,13 @@ add_action( 'after_setup_theme', 'customwebsite_content_width', 0 );
  */
 function customwebsite_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'customwebsite' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Footer', 'customwebsite' ),
+		'id'            => 'sidebar-footer',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<div class="pure-u-1 pure-u-md-1-'
+			. get_theme_mod('columns_sidebar_footer', '1')
+			.'"><aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside></div>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
@@ -115,19 +117,17 @@ function customwebsite_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Register CSS
-	wp_register_style('purecss', '//cdn.jsdelivr.net/pure/0.6.0/pure-min.css', array(), '0.6.0');
-	// TODO: limit number of CSS styles loaded
-	// wp_register_style('purecss', 'http://yui.yahooapis.com/pure/0.6.0/menus-min.css', array(), '0.6.0');
+	// Register Purecss used for grids and menus
+	wp_register_style('purecss', 'http://yui.yahooapis.com/pure/0.6.0/menus-min.css', array(), '0.6.0');
 	wp_enqueue_style('purecss');
+	wp_register_style('purecss-responsive', 'http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css', array(), '0.6.0');
+	wp_enqueue_style('purecss-responsive');
 }
 add_action( 'wp_enqueue_scripts', 'customwebsite_scripts' );
 
 // Disable the emoji styles
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-
 
 /**
  * Implement the Custom Header feature.
