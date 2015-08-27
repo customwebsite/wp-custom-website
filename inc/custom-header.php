@@ -50,7 +50,8 @@ function customwebsite_header_style() {
 	$body_font_family = get_font_family('body');
 	$heading_font_url = get_theme_mod('heading_font_url');
 	$heading_font_family = get_font_family('heading');
-	// TODO add Alternative font block
+	$alternative_font_url = get_theme_mod('alternative_font_url');
+	$alternative_font_family = get_font_family('alternative');
 	if ($body_font_url) {
 		wp_register_style('body_font', $body_font_url);
 		wp_enqueue_style('body_font');
@@ -58,6 +59,10 @@ function customwebsite_header_style() {
 	if ($heading_font_url && ($heading_font_url !== $body_font_url)) {
 		wp_register_style('heading_font', $heading_font_url);
 		wp_enqueue_style('heading_font');
+	}
+	if ($alternative_font_url && ($alternative_font_url !== $body_font_url)) {
+		wp_register_style('alternative_font', $alternative_font_url);
+		wp_enqueue_style('alternative_font');
 	}
 	?>
 	<style type="text/css">
@@ -95,13 +100,18 @@ function customwebsite_header_style() {
 	<?php endif; ?>
 
 	<?php if ($body_font_family) : ?>
-		body, p {
+		.font-body, body, p {
 			font-family: <?php echo $body_font_family; ?>;
 		}
 	<?php endif; ?>
 	<?php if ($heading_font_family) : ?>
-		h1, h2, h3, h4, h5, h6 {
+		.font-heading, h1, h2, h3, h4, h5, h6 {
 			font-family: <?php echo $heading_font_family; ?>;
+		}
+	<?php endif; ?>
+	<?php if ($alternative_font_family) : ?>
+		.font-alternative {
+			font-family: <?php echo $alternative_font_family; ?>;
 		}
 	<?php endif; ?>
 	</style>
