@@ -17,6 +17,20 @@ function customwebsite_customize_register( $wp_customize ) {
 
 	/* COLORS */
 	$wp_customize->add_setting( 
+		'body_text_color' , array(
+			'default'     => '#353432',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'body_text_color',
+		array(
+			'label' => __( 'Body Text Color', 'customwebsite' ),
+			'section' => 'colors',
+		)
+	));
+
+	$wp_customize->add_setting( 
 		'link_color' , array(
 			'default'     => '#2F4D8D',
 			'transport'   => 'refresh',

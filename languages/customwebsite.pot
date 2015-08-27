@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-27 22:52+1000\n"
+"POT-Creation-Date: 2015-08-28 07:01+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,43 +23,47 @@ msgid "http://wordpress.org/"
 msgstr ""
 
 #: inc/customizer.php:28
+msgid "Body Text Color"
+msgstr ""
+
+#: inc/customizer.php:42
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:29
+#: inc/customizer.php:43
 msgid ""
 "By default the visited link color is the same as links which have not been "
 "visited"
 msgstr ""
 
-#: inc/customizer.php:43
+#: inc/customizer.php:57
 msgid "Link Hover Color"
 msgstr ""
 
-#: inc/customizer.php:57
+#: inc/customizer.php:71
 msgid "Navigation Link Color"
 msgstr ""
 
-#: inc/customizer.php:66
+#: inc/customizer.php:80
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:122
+#: inc/customizer.php:136
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:137
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:152
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:167
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""

@@ -43,6 +43,7 @@ if ( ! function_exists( 'customwebsite_header_style' ) ) :
  */
 function customwebsite_header_style() {
 	$header_text_color = get_header_textcolor();
+	$body_text_color = get_theme_mod('body_text_color');
 	$link_color = get_theme_mod('link_color');
 	$link_hover_color = get_theme_mod('link_hover_color');
 	$nav_link_color = get_theme_mod('nav_link_color');
@@ -81,6 +82,11 @@ function customwebsite_header_style() {
 		}
 	<?php endif; ?>
 
+	<?php if ($body_text_color) : ?>
+		body, p {
+			color: <?php echo  esc_attr($body_text_color); ?>;
+		}
+	<?php endif; ?>
 	<?php if ($link_color) : ?>
 		a, a:visited {
 			color: <?php echo  esc_attr($link_color); ?>;
