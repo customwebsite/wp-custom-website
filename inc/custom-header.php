@@ -43,6 +43,7 @@ if ( ! function_exists( 'customwebsite_header_style' ) ) :
  */
 function customwebsite_header_style() {
 	$favicon_icon = get_theme_mod('favicon_icon');
+	$background_nav_color = get_theme_mod('background_nav_color');
 	$header_text_color = get_header_textcolor();
 	$body_text_color = get_theme_mod('body_text_color');
 	$link_color = get_theme_mod('link_color');
@@ -89,6 +90,11 @@ function customwebsite_header_style() {
 		}
 	<?php endif; ?>
 
+	<?php if ($background_nav_color) : ?>
+		.main-navigation {
+			background: <?php echo  esc_attr($background_nav_color); ?>;
+		}
+	<?php endif; ?>
 	<?php if ($body_text_color) : ?>
 		body, p {
 			color: <?php echo  esc_attr($body_text_color); ?>;

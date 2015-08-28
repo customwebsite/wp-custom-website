@@ -35,6 +35,19 @@ function customwebsite_customize_register( $wp_customize ) {
 
 	/* COLORS */
 	$wp_customize->add_setting( 
+		'background_nav_color' , array(
+			'default'     => '#FFFFFF',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'background_nav_color',
+		array(
+			'label' => __( 'The background color for the navigation bar', 'customwebsite' ),
+			'section' => 'colors',
+		)
+	));
+	$wp_customize->add_setting( 
 		'body_text_color' , array(
 			'default'     => '#353432',
 			'transport'   => 'refresh',

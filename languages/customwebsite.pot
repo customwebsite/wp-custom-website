@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-28 16:48+1000\n"
+"POT-Creation-Date: 2015-08-29 09:59+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,72 +22,81 @@ msgstr ""
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: inc/customizer.php:28
+#: inc/customizer.php:31
+msgid ""
+"A 16px by 16px version of the site icon to be used for tabs within browsers."
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "The background color for the navigation bar"
+msgstr ""
+
+#: inc/customizer.php:59
 msgid "Body Text Color"
 msgstr ""
 
-#: inc/customizer.php:42
+#: inc/customizer.php:73
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:43
+#: inc/customizer.php:74
 msgid ""
 "By default the visited link color is the same as links which have not been "
 "visited"
 msgstr ""
 
-#: inc/customizer.php:57
+#: inc/customizer.php:88
 msgid "Link Hover Color"
 msgstr ""
 
-#: inc/customizer.php:71
+#: inc/customizer.php:102
 msgid "Navigation Link Color"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:111
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:143
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:124
+#: inc/customizer.php:155
 msgid "Footer Columns"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:156
 msgid ""
 "Columns to be used for the footer sidebar section above 768px in screen "
 "width."
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:169
 msgid "Default Template Side Padding"
 msgstr ""
 
-#: inc/customizer.php:139
+#: inc/customizer.php:170
 msgid ""
 "Padding to be used for text elements within the content area for the default "
 "template."
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:204
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:205
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:220
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:235
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""
