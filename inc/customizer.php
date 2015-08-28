@@ -129,7 +129,7 @@ function customwebsite_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_setting(
 		'default_template_text_padding_side' , array(
-			'default'     => '10%',
+			'default'     => '10%%',
 			'transport'   => 'refresh',
 	) );
 	$wp_customize->add_control(

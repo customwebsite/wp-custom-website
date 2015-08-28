@@ -121,7 +121,7 @@ function customwebsite_header_style() {
 			font-family: <?php echo $alternative_font_family; ?>;
 		}
 	<?php endif; ?>
-	<?php if ($text_padding_side) : ?>
+	<?php if (isset($text_padding_side)) : ?>
 		.site-content p,
 		.site-content h1,
 		.site-content h2,
