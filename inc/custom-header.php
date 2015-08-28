@@ -56,7 +56,7 @@ function customwebsite_header_style() {
 	$alternative_font_url = get_theme_mod('alternative_font_url');
 	$alternative_font_family = get_font_family('alternative');
 	if ($favicon_icon) {
-		printf('<link rel="icon shortcut" href="%1$s" sizes="16x16"',
+		printf('<link rel="icon shortcut" href="%1$s" sizes="16x16" />',
 			esc_attr($favicon_icon)
 		);
 	}
