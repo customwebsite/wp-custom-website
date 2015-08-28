@@ -35,6 +35,7 @@ function customwebsite_setup() {
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
+	 * TODO: set_post_thumbnail_size 568px, 768px, 1024px, 1280px
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
