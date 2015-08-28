@@ -42,6 +42,7 @@ if ( ! function_exists( 'customwebsite_header_style' ) ) :
  * @see customwebsite_custom_header_setup().
  */
 function customwebsite_header_style() {
+	$favicon_icon = get_theme_mod('favicon_icon');
 	$header_text_color = get_header_textcolor();
 	$body_text_color = get_theme_mod('body_text_color');
 	$link_color = get_theme_mod('link_color');
@@ -54,6 +55,11 @@ function customwebsite_header_style() {
 	$heading_font_family = get_font_family('heading');
 	$alternative_font_url = get_theme_mod('alternative_font_url');
 	$alternative_font_family = get_font_family('alternative');
+	if ($favicon_icon) {
+		printf('<link rel="icon shortcut" href="%1$s" sizes="16x16"',
+			esc_attr($favicon_icon)
+		);
+	}
 	if ($body_font_url) {
 		wp_register_style('body_font', $body_font_url);
 		wp_enqueue_style('body_font');

@@ -15,6 +15,24 @@ function customwebsite_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	/* Site Title */
+	$wp_customize->add_setting(
+		'favicon_icon',
+		array(
+			'default' => '',
+			'transport' => 'refresh',
+			// TODO: Add sanitation to restrict image to 16px by 16px
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'favicon_icon',
+		array(
+			'label' => __('A 16px by 16px version of the site icon to be used for tabs within browsers.', 'customwebsite'),
+			'section' => 'title_tagline'
+		)
+	) );
+
 	/* COLORS */
 	$wp_customize->add_setting( 
 		'body_text_color' , array(
