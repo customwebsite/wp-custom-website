@@ -47,6 +47,7 @@ function customwebsite_header_style() {
 	$link_color = get_theme_mod('link_color');
 	$link_hover_color = get_theme_mod('link_hover_color');
 	$nav_link_color = get_theme_mod('nav_link_color');
+	$text_padding_side = get_theme_mod('default_template_text_padding_side');
 	$body_font_url = get_theme_mod('body_font_url');
 	$body_font_family = get_font_family('body');
 	$heading_font_url = get_theme_mod('heading_font_url');
@@ -118,6 +119,19 @@ function customwebsite_header_style() {
 	<?php if ($alternative_font_family) : ?>
 		.font-alternative {
 			font-family: <?php echo $alternative_font_family; ?>;
+		}
+	<?php endif; ?>
+	<?php if ($text_padding_side) : ?>
+		.site-content p,
+		.site-content h1,
+		.site-content h2,
+		.site-content h3,
+		.site-content h4,
+		.site-content h5,
+		.site-content h6,
+		.site-content form {
+			padding-left: <?php echo $text_padding_side; ?>;
+			padding-right: <?php echo $text_padding_side; ?>;
 		}
 	<?php endif; ?>
 	</style>

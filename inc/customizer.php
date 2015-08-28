@@ -127,6 +127,20 @@ function customwebsite_customize_register( $wp_customize ) {
 			'section' => 'layout',
 		)
 	);
+	$wp_customize->add_setting(
+		'default_template_text_padding_side' , array(
+			'default'     => '10%',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'default_template_text_padding_side',
+		array(
+			'label' => __( 'Default Template Side Padding', 'customwebsite' ),
+			'description' => __('Padding to be used for text elements within the content area for the default template.', 'customwebsite'),
+			'type' => 'text',
+			'section' => 'layout',
+		)
+	);
 }
 add_action( 'customize_register', 'customwebsite_customize_register' );
 

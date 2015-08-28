@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-28 14:37+1000\n"
+"POT-Creation-Date: 2015-08-28 16:48+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,22 +62,32 @@ msgid ""
 "width."
 msgstr ""
 
-#: inc/customizer.php:159
+#: inc/customizer.php:138
+msgid "Default Template Side Padding"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid ""
+"Padding to be used for text elements within the content area for the default "
+"template."
+msgstr ""
+
+#: inc/customizer.php:173
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:174
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:189
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:190
+#: inc/customizer.php:204
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""
