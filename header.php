@@ -38,7 +38,7 @@
 			}
 		?>
 		<nav id="site-navigation" class="main-navigation custom-wrapper" role="navigation">
-			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss', 'menuToggle' => true)); // TODO: Add menu_type setting to menus ?>
+			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss', 'menuToggle' => get_theme_mod('nav_menu_toggle')));?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

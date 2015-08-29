@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-29 14:48+1000\n"
+"POT-Creation-Date: 2015-08-29 15:15+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,92 +71,106 @@ msgstr ""
 msgid "Below Navigation Bar"
 msgstr ""
 
-#: inc/customizer.php:95
-msgid "The background color for the navigation bar"
+#: inc/customizer.php:89
+msgid "Navigation"
 msgstr ""
 
-#: inc/customizer.php:108
-msgid "Body Text Color"
+#: inc/customizer.php:101
+msgid "Primary Navigation Menu Toggle"
+msgstr ""
+
+#: inc/customizer.php:102
+msgid ""
+"Select if the navigation menu will have toggle a vertical menu for smaller "
+"screens."
+msgstr ""
+
+#: inc/customizer.php:105 inc/customizer.php:263
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:106 inc/customizer.php:264
+msgid "No"
 msgstr ""
 
 #: inc/customizer.php:122
+msgid "The background color for the navigation bar"
+msgstr ""
+
+#: inc/customizer.php:135
+msgid "Body Text Color"
+msgstr ""
+
+#: inc/customizer.php:149
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:150
 msgid ""
 "By default the visited link color is the same as links which have not been "
 "visited"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:164
 msgid "Link Hover Color"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:178
 msgid "Navigation Link Color"
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:187
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:219
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:231
 msgid "Footer Columns"
 msgstr ""
 
-#: inc/customizer.php:205
+#: inc/customizer.php:232
 msgid ""
 "Columns to be used for the footer sidebar section above 768px in screen "
 "width."
 msgstr ""
 
-#: inc/customizer.php:218
+#: inc/customizer.php:245
 msgid "Default Template Side Padding"
 msgstr ""
 
-#: inc/customizer.php:219
+#: inc/customizer.php:246
 msgid ""
 "Padding to be used for text elements within the content area for the default "
 "template."
 msgstr ""
 
-#: inc/customizer.php:232
+#: inc/customizer.php:259
 msgid "Display Page Title"
 msgstr ""
 
-#: inc/customizer.php:233
+#: inc/customizer.php:260
 msgid "Display the page title as a h1 element on each page."
 msgstr ""
 
-#: inc/customizer.php:236
-msgid "Yes"
-msgstr ""
-
-#: inc/customizer.php:237
-msgid "No"
-msgstr ""
-
-#: inc/customizer.php:271
+#: inc/customizer.php:298
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:272
+#: inc/customizer.php:299
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:314
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:302
+#: inc/customizer.php:329
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""

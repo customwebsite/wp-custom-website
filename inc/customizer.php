@@ -81,6 +81,33 @@ function customwebsite_customize_register( $wp_customize ) {
 			'section' => 'header_image',
 		)
 	);
+
+	// Navigation
+	$wp_customize->add_section(
+        'navigation',
+        array(
+            'title' => __('Navigation', 'customwebsite'),
+            'priority' => 50,
+        )
+    );
+	$wp_customize->add_setting(
+		'nav_menu_toggle' , array(
+			'default'     => true,
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'nav_menu_toggle',
+		array(
+			'label' => __( 'Primary Navigation Menu Toggle', 'customwebsite' ),
+			'description' => __('Select if the navigation menu will have toggle a vertical menu for smaller screens.', 'customwebsite'),
+			'type' => 'radio',
+			'choices' => array(
+				true => __('Yes', 'customwebsite'),
+				'' => __('No', 'customwebsite'),
+			),
+			'section' => 'navigation',
+		)
+	);
 	
 	/* COLORS */
 	$wp_customize->add_setting( 
