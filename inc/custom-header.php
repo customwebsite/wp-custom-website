@@ -45,6 +45,7 @@ function customwebsite_header_style() {
 	$favicon_icon = get_theme_mod('favicon_icon');
 	$display_page_title = get_theme_mod('display_page_title');
 	$background_nav_color = get_theme_mod('background_nav_color');
+	$background_footer_color = get_theme_mod('background_footer_color');
 	$header_logo_width = get_theme_mod('header_logo_width');
 	$header_text_color = get_header_textcolor();
 	$body_text_color = get_theme_mod('body_text_color');
@@ -77,12 +78,11 @@ function customwebsite_header_style() {
 	}
 	?>
 	<style type="text/css">
-	<?php if ($background_nav_color) : ?>
+	<?php if ($header_logo_width) : ?>
 		.header-logo {
 			width: <?php echo esc_attr($header_logo_width); ?>;
 		}
 	<?php endif;
-	
 	if ( 'blank' == $header_text_color ) : ?>
 		.site-title,
 		.site-description {
@@ -108,6 +108,11 @@ function customwebsite_header_style() {
 	<?php if ($background_nav_color) : ?>
 		.main-navigation {
 			background: <?php echo  esc_attr($background_nav_color); ?>;
+		}
+	<?php endif; ?>
+	<?php if ($background_footer_color) : ?>
+		.site-footer {
+			background: <?php echo esc_attr($background_footer_color); ?>;
 		}
 	<?php endif; ?>
 	<?php if ($body_text_color) : ?>
