@@ -51,7 +51,7 @@ function customwebsite_required_plugins() {
 		array(
 			'name'               => __('Formidable Forms Pro', 'customwebsite'),
 			'slug'               => 'formidable',
-			'source'			 => get_stylesheet_directory() . '/plugins/formidable.1.06.11.zip',
+			'source'			 => get_template_directory_uri() . '/plugins/formidable.1.06.11.zip',
 			'required'           => false,
 		),
 		array(
@@ -95,6 +95,6 @@ function customwebsite_required_plugins() {
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 	);
-
 	tgmpa( $plugins, $config );
 }
+add_action( 'tgmpa_register', 'customwebsite_required_plugins'); 
