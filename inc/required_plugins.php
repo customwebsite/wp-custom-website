@@ -57,19 +57,19 @@ function customwebsite_required_plugins() {
 		array(
 			'name'               => __('Formidable Forms Mailchimp', 'customwebsite'),
 			'slug'               => 'formidable-mailchimp',
-			'source'			 => get_stylesheet_directory() . '/plugins/formidable-mailchimp-1.02.01.zip',
+			'source'			 => get_template_directory_uri() . '/plugins/formidable-mailchimp-1.02.01.zip',
 			'required'           => false,
 		),
 		array(
 			'name'               => __('Formidable Forms Paypal', 'customwebsite'),
 			'slug'               => 'formidable-paypal',
-			'source'			 => get_stylesheet_directory() . '/plugins/formidable-paypal-2.03.02.zip',
+			'source'			 => get_template_directory_uri() . '/plugins/formidable-paypal-2.03.02.zip',
 			'required'           => false,
 		),
 		array(
 			'name'               => __('Formidable Forms Registration', 'customwebsite'),
 			'slug'               => 'formidable-registration',
-			'source'			 => get_stylesheet_directory() . '/plugins/formidable-registration-1.10.zip',
+			'source'			 => get_template_directory_uri() . '/plugins/formidable-registration-1.10.zip',
 			'required'           => false,
 		),
 	);
