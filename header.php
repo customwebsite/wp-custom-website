@@ -41,5 +41,4 @@
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss', 'menuToggle' => get_theme_mod('nav_menu_toggle')));?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

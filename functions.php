@@ -183,6 +183,11 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/navigation.php';
 
 /**
+ * Add navigation customization
+ */
+require get_template_directory() . '/inc/page-banner.php';
+
+/**
  * Plugin requirements
  */
 require get_template_directory() . '/vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php';

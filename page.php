@@ -10,7 +10,9 @@
  * @package Custom Website
  */
 
-get_header(); ?>
+get_header(); 
+get_page_banner();
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
