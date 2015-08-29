@@ -13,9 +13,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'customwebsite' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'customwebsite' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'customwebsite' ), 'customwebsite', '<a href="http://underscores.me/" rel="designer">Shaun Haddrill</a>' ); ?>
+			<span class="copyright">
+			<?php printf(__('Copyright &copy; %1$s %2$s All Right&#27;s reserved', 'customwebsite'),
+				date('Y'), // 1
+				get_bloginfo('name')
+			); ?>
+			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
