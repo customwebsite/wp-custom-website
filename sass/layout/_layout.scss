@@ -9,3 +9,24 @@
 	padding-left: 10%;
 	padding-right: 10%;
 }
+
+/* LOGO */
+.header-logo-display-none {
+	display: none;
+}
+.header-logo-nav-left {
+	display: inline;
+	float: left;
+}
+.header-logo-nav-right {
+	display: inline;
+	float: right;
+}
+/* Default position, nothing to be done 
+.header-logo-nav-above {
+}
+*/
+.header-logo-nav-below {
+	display: block;
+	float: right;	
+}

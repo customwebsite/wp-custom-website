@@ -5,6 +5,13 @@
  * @package Custom Website
  */
 
+// Theme Constants
+const HEADER_LOGO_LOCATION_NONE = 1;
+const HEADER_LOGO_LOCATION_NAV_LEFT = 2;
+const HEADER_LOGO_LOCATION_NAV_RIGHT = 3;
+const HEADER_LOGO_LOCATION_NAV_ABOVE = 4;
+const HEADER_LOGO_LOCATION_NAV_BELOW = 5;
+
 if ( ! function_exists( 'customwebsite_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

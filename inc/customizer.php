@@ -32,7 +32,56 @@ function customwebsite_customize_register( $wp_customize ) {
 			'section' => 'title_tagline'
 		)
 	) );
-
+	$wp_customize->add_setting(
+		'header_logo' , array(
+			'default'     => null,
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'header_logo',
+		array(
+			'label' => __( 'Header Logo', 'customwebsite' ),
+			'description' => __('The logo to be displayed within the website header..', 'customwebsite'),
+			'type' => 'image',
+			'section' => 'header_image',
+		)
+	) );
+	$wp_customize->add_setting(
+		'header_logo_width' , array(
+			'default'     => '200px',
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'header_logo_width',
+		array(
+			'label' => __( 'Header Logo Width', 'customwebsite' ),
+			'type' => 'text',
+			'section' => 'header_image',
+		)
+	);
+	$wp_customize->add_setting(
+		'header_logo_location' , array(
+			'default'     => HEADER_LOGO_LOCATION_NAV_ABOVE,
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'header_logo_location',
+		array(
+			'label' => __( 'Location of Header Logo', 'customwebsite' ),
+			'description' => __('Select where the header logo will be displayed, if at all.', 'customwebsite'),
+			'type' => 'radio',
+			'choices' => array(
+				HEADER_LOGO_LOCATION_NONE => __("Dont't Display"),
+				HEADER_LOGO_LOCATION_NAV_LEFT => __('Left of Navigation Bar'),
+				HEADER_LOGO_LOCATION_NAV_RIGHT => __('Right of Navigation Bar'),
+				HEADER_LOGO_LOCATION_NAV_ABOVE => __('Above Navigation Bar'),
+				HEADER_LOGO_LOCATION_NAV_BELOW => __('Below Navigation Bar'),
+			),
+			'section' => 'header_image',
+		)
+	);
+	
 	/* COLORS */
 	$wp_customize->add_setting( 
 		'background_nav_color' , array(
@@ -255,6 +304,33 @@ function customizer_add_font(
 			'section' => 'fonts',
 		)
 	);
+}
+
+/**
+ * Returns the classnames for a the theme's logo image within the header.
+ * @return string
+ */
+function get_header_logo_class() {
+	$location = get_theme_mod('header_logo_location');
+	$class = 'header-logo';
+	switch ($location) {
+		case HEADER_LOGO_LOCATION_NONE:
+			$class .= ' header-logo-display-none';
+			break;
+		case HEADER_LOGO_LOCATION_NAV_LEFT:
+			$class .= ' header-logo-nav-left';
+			break;
+		case HEADER_LOGO_LOCATION_NAV_RIGHT:
+			$class .= ' header-logo-nav-right';
+			break;
+		case HEADER_LOGO_LOCATION_NAV_ABOVE:
+			$class .= ' header-logo-nav-above';
+			break;
+		case HEADER_LOGO_LOCATION_NAV_BELOW:
+			$class .= ' header-logo-nav-below';
+			break;
+	}
+	return $class;
 }
 
 /**

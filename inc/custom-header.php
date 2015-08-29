@@ -45,6 +45,7 @@ function customwebsite_header_style() {
 	$favicon_icon = get_theme_mod('favicon_icon');
 	$display_page_title = get_theme_mod('display_page_title');
 	$background_nav_color = get_theme_mod('background_nav_color');
+	$header_logo_width = get_theme_mod('header_logo_width');
 	$header_text_color = get_header_textcolor();
 	$body_text_color = get_theme_mod('body_text_color');
 	$link_color = get_theme_mod('link_color');
@@ -76,7 +77,11 @@ function customwebsite_header_style() {
 	}
 	?>
 	<style type="text/css">
-	<?php
+	<?php if ($background_nav_color) : ?>
+		.header-logo {
+			width: <?php echo esc_attr($header_logo_width); ?>;
+		}
+	<?php endif;
 	
 	if ( 'blank' == $header_text_color ) : ?>
 		.site-title,

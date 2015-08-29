@@ -27,7 +27,16 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- .site-branding -->
-
+		<?php
+			$header_logo = get_theme_mod('header_logo');
+			if ($header_logo) {
+				printf('<img src="%1$s" alt="%2$s %3$s" class="%4$s" />',
+					$header_logo,
+					get_bloginfo('name'),
+					__('Logo', 'customwebsite'),
+					get_header_logo_class());
+			}
+		?>
 		<nav id="site-navigation" class="main-navigation custom-wrapper" role="navigation">
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_type' => 'purecss', 'menuToggle' => true)); // TODO: Add menu_type setting to menus ?>
 		</nav><!-- #site-navigation -->
