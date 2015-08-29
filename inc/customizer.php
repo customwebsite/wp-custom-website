@@ -33,6 +33,23 @@ function customwebsite_customize_register( $wp_customize ) {
 		)
 	) );
 	$wp_customize->add_setting(
+		'banner_hide_too_large' , array(
+			'default'     => false,
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'banner_hide_too_large',
+		array(
+			'label' => __( 'Hide the Header Banner if the window is wider than the banner.', 'customwebsite' ),
+			'type' => 'radio',
+			'choices' => array(
+				true => __('Yes', 'customwebsite'),
+				'' => __('No', 'customwebsite'),
+			),
+			'section' => 'header_image',
+		)
+	);
+	$wp_customize->add_setting(
 		'header_logo' , array(
 			'default'     => null,
 			'transport'   => 'refresh',

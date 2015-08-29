@@ -45,16 +45,19 @@ function add_banner_image_styles() {
 		}   
 	}   
 	// Hide the image banner if the screen size is too large
-	printf('<style text="text/css" media="screen and (min-width:%1$spx)">%2$s</style>',
-		$largestWidth,
-		'.customwebsite-page-banner {display:none;}'
-	);
+	if (get_theme_mod('banner_hide_too_large')) {
+		printf('<style text="text/css" media="screen and (min-width:%1$spx)">%2$s</style>',
+			$largestWidth,
+			'.customwebsite-page-banner {display:none;}'
+		);
+	}
 	krsort($imagesSorted);
 	foreach ($imagesSorted as $key => $image) {
 		$url = $image->properties[0];
 		$width = $image->properties[1];
-		printf('<style text="text/css" media="screen and (max-width:%1$spx)">%2$s</style>',
-			$width,
+		printf('<style text="text/css" media="screen and (%1$s-width:%2$spx)">%3$s</style>',
+			($width == ($largestWidth - 1)) ? 'min' : 'max',
+			($width == ($largestWidth - 1)) ? 0 : $width,
 			' .customwebsite-page-banner {background: url( "' . $url . '" ) no-repeat center center;}'
 		);
 	}
