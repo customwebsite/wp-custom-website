@@ -172,6 +172,24 @@ function customwebsite_customize_register( $wp_customize ) {
 			'section' => 'layout',
 		)
 	);
+	$wp_customize->add_setting(
+		'display_page_title' , array(
+			'default'     => true,
+			'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control(
+		'display_page_title',
+		array(
+			'label' => __( 'Display Page Title', 'customwebsite' ),
+			'description' => __('Display the page title as a h1 element on each page.', 'customwebsite'),
+			'type' => 'radio',
+			'choices' => array(
+				true => __('Yes'),
+				'' => __('No'),
+			),
+			'section' => 'layout',
+		)
+	);
 }
 add_action( 'customize_register', 'customwebsite_customize_register' );
 

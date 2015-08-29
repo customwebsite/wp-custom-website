@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-29 09:59+1000\n"
+"POT-Creation-Date: 2015-08-29 12:10+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,22 +81,38 @@ msgid ""
 "template."
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:183
+msgid "Display Page Title"
+msgstr ""
+
+#: inc/customizer.php:184
+msgid "Display the page title as a h1 element on each page."
+msgstr ""
+
+#: inc/customizer.php:187
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:188
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:222
 #, php-format
 msgid "%1$s Font"
 msgstr ""
 
-#: inc/customizer.php:205
+#: inc/customizer.php:223
 #, php-format
 msgid "The Url to the css script which defines the %1$s fonts."
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:238
 #, php-format
 msgid "%1$s Primary Font"
 msgstr ""
 
-#: inc/customizer.php:235
+#: inc/customizer.php:253
 #, php-format
 msgid "%1$s Secondary Font"
 msgstr ""
