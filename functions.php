@@ -42,11 +42,26 @@ function customwebsite_setup() {
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
-	 * TODO: set_post_thumbnail_size 568px, 768px, 1024px, 1280px
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'purecss-sm', 568, 568 );
+	add_image_size( 'purecss-md', 768, 768 );
+	add_image_size( 'purecss-lg', 1024, 1024 );
+	add_image_size( 'purecss-xl', 1280, 1280 );
+
+	/**
+	 * Set the selectable thumbnail sizes to be used from within admin dashboard.
+	 * @param array $sizes
+	 */ 
+	function customwebsite_custom_sizes( $sizes ) {
+		return array_merge( $sizes, array(
+			'purecss-lg' => __( 'Tablet Width', 'customwebsite'),
+			'medium' => __('Mobile', 'customwebsite'),
+		) );
+	}
+	add_filter( 'image_size_names_choose', 'customwebsite_custom_sizes' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
