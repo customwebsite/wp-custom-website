@@ -54,6 +54,17 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
+			'name'               => __('Q-Translate Slug', 'customwebsite'),
+			'slug'               => 'qtranslate-slug',
+			'required'           => false,
+		),
+		array(
+			'name'               => __('Q-Translate', 'customwebsite'),
+			'slug'               => 'qtranslate',
+			'required'           => false,
+			'source'			 => 'https://github.com/qTranslate-Team/qtranslate-x.git',
+		),
+		array(
 			'name'               => __('Formidable Forms Pro', 'customwebsite'),
 			'slug'               => 'formidable',
 			'source'			 => get_template_directory_uri() . '/plugins/formidable-1.07.09.zip',
