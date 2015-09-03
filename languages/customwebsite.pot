@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-30 00:59+1000\n"
+"POT-Creation-Date: 2015-09-03 23:49+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,22 +221,26 @@ msgid "Custom Permalinks"
 msgstr ""
 
 #: inc/required_plugins.php:47
-msgid "TinyMCE Widget"
+msgid "TinyMCE Advanced"
 msgstr ""
 
 #: inc/required_plugins.php:52
+msgid "TinyMCE Widget"
+msgstr ""
+
+#: inc/required_plugins.php:57
 msgid "Formidable Forms Pro"
 msgstr ""
 
-#: inc/required_plugins.php:58
+#: inc/required_plugins.php:63
 msgid "Formidable Forms Mailchimp"
 msgstr ""
 
-#: inc/required_plugins.php:64
+#: inc/required_plugins.php:69
 msgid "Formidable Forms Paypal"
 msgstr ""
 
-#: inc/required_plugins.php:70
+#: inc/required_plugins.php:75
 msgid "Formidable Forms Registration"
 msgstr ""
 

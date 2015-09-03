@@ -44,6 +44,11 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
+			'name'               => __('TinyMCE Advanced', 'customwebsite'),
+			'slug'               => 'tinymce-advanced',
+			'required'           => false,
+		),
+		array(
 			'name'               => __('TinyMCE Widget', 'customwebsite'),
 			'slug'               => 'black-studio-tinymce-widget',
 			'required'           => false,
