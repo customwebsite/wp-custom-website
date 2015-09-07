@@ -44,6 +44,11 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
+			'name'               => __('Navigation Breadcrumbs', 'customwebsite'),
+			'slug'               => 'breadcrumb-navxt',
+			'required'           => false,
+		),
+		array(
 			'name'               => __('TinyMCE Advanced', 'customwebsite'),
 			'slug'               => 'tinymce-advanced',
 			'required'           => false,
@@ -62,7 +67,13 @@ function customwebsite_required_plugins() {
 			'name'               => __('Q-Translate', 'customwebsite'),
 			'slug'               => 'qtranslate',
 			'required'           => false,
-			'source'			 => 'https://github.com/qTranslate-Team/qtranslate-x.git',
+			'source'			 => 'https://github.com/qTranslate-Team/qtranslate-x/archive/master.zip',
+		),
+		array(
+			'name'               => __('Custom Website Footer Replace', 'customwebsite'),
+			'slug'               => 'custom-website-footer',
+			'source'			 => get_template_directory_uri() . '/plugins/custom-footer-replace.2.0.zip',
+			'required'           => false,
 		),
 		array(
 			'name'               => __('Formidable Forms Pro', 'customwebsite'),
