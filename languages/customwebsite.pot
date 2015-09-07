@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customwebsite 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 22:42+1000\n"
+"POT-Creation-Date: 2015-09-07 22:44+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -233,30 +233,34 @@ msgid "TinyMCE Widget"
 msgstr ""
 
 #: inc/required_plugins.php:62
-msgid "Q-Translate Slug"
+msgid "Display Widgets"
 msgstr ""
 
 #: inc/required_plugins.php:67
+msgid "Q-Translate Slug"
+msgstr ""
+
+#: inc/required_plugins.php:72
 msgid "Q-Translate"
 msgstr ""
 
-#: inc/required_plugins.php:73
+#: inc/required_plugins.php:78
 msgid "Custom Website Footer Replace"
 msgstr ""
 
-#: inc/required_plugins.php:79
+#: inc/required_plugins.php:84
 msgid "Formidable Forms Pro"
 msgstr ""
 
-#: inc/required_plugins.php:85
+#: inc/required_plugins.php:90
 msgid "Formidable Forms Mailchimp"
 msgstr ""
 
-#: inc/required_plugins.php:91
+#: inc/required_plugins.php:96
 msgid "Formidable Forms Paypal"
 msgstr ""
 
-#: inc/required_plugins.php:97
+#: inc/required_plugins.php:102
 msgid "Formidable Forms Registration"
 msgstr ""
 

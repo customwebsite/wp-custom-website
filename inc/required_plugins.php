@@ -59,6 +59,11 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
+			'name'               => __('Display Widgets', 'customwebsite'),
+			'slug'               => 'display-widgets',
+			'required'           => false,
+		),
+		array(
 			'name'               => __('Q-Translate Slug', 'customwebsite'),
 			'slug'               => 'qtranslate-slug',
 			'required'           => false,
