@@ -64,6 +64,12 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
+			'name'               => __('Simple History', 'customwebsite'),
+			'slug'               => 'simple-history',
+			'required'           => false,
+			'source'			 => 'https://github.com/bonny/WordPress-Simple-History/archive/master.zip',
+		),
+		array(
 			'name'               => __('Q-Translate Slug', 'customwebsite'),
 			'slug'               => 'qtranslate-slug',
 			'required'           => false,
