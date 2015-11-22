@@ -17,11 +17,13 @@ function customwebsite_required_plugins() {
 			'name'               => __('Under Construction', 'customwebsite'),
 			'slug'               => 'underconstruction',
 			'required'           => false,
+			'source'			 => 'https://github.com/wp-plugins/underconstruction/archive/master.zip',
 		),
 		array(
 			'name'               => __('Google Analyticator', 'customwebsite'),
 			'slug'               => 'google-analyticator',
 			'required'           => false,
+			'source'			 => 'https://github.com/wp-plugins/google-analyticator/archive/master.zip',
 		),
 		array(
 			'name'               => __('Google Sitemap Generator', 'customwebsite'),
