@@ -31,8 +31,8 @@ function customwebsite_required_plugins() {
 			'required'           => false,
 		),
 		array(
-			'name'               => __('Auto Thickbox Plus', 'customwebiste'),
-			'slug'               => 'auto-thickbox-plus',
+			'name'               => __('Auto Thickbox', 'customwebiste'),
+			'slug'               => 'auto-thickbox',
 			'required'           => false,
 		),
 		array(
