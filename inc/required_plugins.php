@@ -91,7 +91,7 @@ function customwebsite_required_plugins() {
 		array(
 			'name'               => __('Formidable Forms Pro', 'customwebsite'),
 			'slug'               => 'formidable',
-			'source'			 => get_template_directory_uri() . '/plugins/formidable-1.07.09.zip',
+			'source'			 => get_template_directory_uri() . '/plugins/formidable-2.0.19.zip',
 			'required'           => false,
 		),
 		array(
